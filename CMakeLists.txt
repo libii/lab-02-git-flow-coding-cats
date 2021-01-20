@@ -1,15 +1,17 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+project(ProjectName)
 
-ADD_SUBDIRECTORY(googletest)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 SET(CMAKE_CXX_STANDARD 11)
 
-ADD_EXECUTABLE(c-echo-count
-	main.cpp
+ADD_SUBDIRECTORY(googletest)
+
+ADD_EXECUTABLE(c-echo
+    main2.cpp
 )
 
 ADD_EXECUTABLE(test
-	test.cpp
+    test.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
